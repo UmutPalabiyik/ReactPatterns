@@ -11,7 +11,7 @@ const Traveler = ({ src, alt, children }: any) => {
 
 
     return (
-        <div className="w-80 h-96 overflow-hidden relative">
+        <div className="w-60 h-72 overflow-hidden relative">
             <img src={src} alt={alt} className="w-full max-w-full max-h-full rounded-lg" />
             <TravelerContext.Provider value={{ toggle, setToggle }}>
                 {children}
