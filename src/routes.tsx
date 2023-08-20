@@ -10,6 +10,7 @@ const Paths = {
 const CompoundPattern = lazy(() => import('./routes/CompoundPattern')) */
 import Layout from './routes/Layout';
 import CompoundPattern from './routes/CompoundPattern';
+import WithoutCompoundPattern from './routes/WithoutCompoundPattern';
 
 type TRoute = {
     name: string;
@@ -26,10 +27,14 @@ const routes = [
         Fallback: null,
         children: [
             {
-              path: "compound-pattern",
-              element: <CompoundPattern />,
+                path: "compound-pattern",
+                element: <CompoundPattern />,
             },
-          ],
+            {
+                path: "without-compound-pattern",
+                element: <WithoutCompoundPattern />,
+            },
+        ],
     },
     /*     {
             name: 'compound',
