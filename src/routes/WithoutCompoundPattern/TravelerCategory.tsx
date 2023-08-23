@@ -1,11 +1,9 @@
 type Props = {
     category: string
-    showCategory?: boolean
 }
 
-const TravelerCategory = ({ category, showCategory = true }: Props) => {
+const TravelerCategory = ({ category }: Props) => {
 
-    if(!showCategory) return null
     return <p className="text-[.7rem] text-[#757575] uppercase mt-2">{category}</p>
 }
 

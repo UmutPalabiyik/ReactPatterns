@@ -1,4 +1,5 @@
 import Traveler from "./Traveler"
+import { products } from "./data"
 
 const CompoundPattern = () => {
 

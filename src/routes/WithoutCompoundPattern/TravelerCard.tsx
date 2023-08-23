@@ -1,6 +1,7 @@
+//components
 import TravelerAction from "./TravelerAction";
 import TravelerCategory from "./TravelerCategory";
-import TravelerFavoriteReportAction from "./TravelerFavoriteReportAction";
+import TravelerTopActions from "./TravelerTopActions";
 import TravelerImage from "./TravelerImage";
 import TravelerPrice from "./TravelerPrice";
 import TravelerRating from "./TravelerRating";
@@ -21,11 +22,11 @@ const TravelerCard = (props: any) => {
     return (
         <div className="w-60 pb-2 overflow-hidden relative border-[1px] border-solid border-slate-400 rounded">
             <TravelerImage src={image} />
-            <TravelerCategory category={category} showCategory={showCategory} />
-            <TravelerTitle title={title} showTitle={showTitle} />
-            <TravelerRating rating={rating} showRating={showRating}/>
-            <TravelerPrice price={price} currency="€" showPrice={showPrice}/>
-            <TravelerFavoriteReportAction favorite={favorite} report={report} />
+            {showCategory && <TravelerCategory category={category} />}
+            {showTitle && <TravelerTitle title={title} />}
+            {showRating && <TravelerRating rating={rating} />}
+            {showPrice && <TravelerPrice price={price} currency="€"  />}
+            <TravelerTopActions favorite={favorite} report={report} />
             <TravelerAction />
         </div>
     )
@@ -35,3 +36,4 @@ const TravelerCard = (props: any) => {
 
 
 export default TravelerCard;
+

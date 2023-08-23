@@ -6,7 +6,7 @@ type Props = {
     report: boolean
 }
 
-const TravelerFavoriteReportAction = ({ favorite, report }: Props) => {
+const TravelerTopActions = ({ favorite, report }: Props) => {
 
     return (
         <div className='absolute top-2 right-2 flex items-center gap-1'>
@@ -17,4 +17,4 @@ const TravelerFavoriteReportAction = ({ favorite, report }: Props) => {
 }
 
 
-export default TravelerFavoriteReportAction;
+export default TravelerTopActions;
