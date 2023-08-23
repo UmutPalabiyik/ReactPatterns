@@ -42,6 +42,10 @@ const WithoutCompoundPattern = () => {
                             category={card.category}
                             title={card.title}
                             price={card.price}
+                            showPrice
+                            showTitle
+                            showCategory
+                            showRating
                             favorite
                             report
                         />

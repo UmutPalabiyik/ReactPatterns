@@ -7,14 +7,24 @@ import TravelerRating from "./TravelerRating";
 import TravelerTitle from "./TravelerTitle";
 
 const TravelerCard = (props: any) => {
-    const { image, rating, category, title, price, favorite, report } = props;
+    const { image,
+        rating,
+        category,
+        title,
+        price,
+        favorite,
+        showPrice,
+        showTitle,
+        showCategory,
+        showRating,
+        report } = props;
     return (
         <div className="w-60 pb-2 overflow-hidden relative border-[1px] border-solid border-slate-400 rounded">
             <TravelerImage src={image} />
-            <TravelerCategory category={category} />
-            <TravelerTitle title={title} />
-            <TravelerRating rating={rating}/>
-            <TravelerPrice price={price} currency="€"/>
+            <TravelerCategory category={category} showCategory={showCategory} />
+            <TravelerTitle title={title} showTitle={showTitle} />
+            <TravelerRating rating={rating} showRating={showRating}/>
+            <TravelerPrice price={price} currency="€" showPrice={showPrice}/>
             <TravelerFavoriteReportAction favorite={favorite} report={report} />
             <TravelerAction />
         </div>
