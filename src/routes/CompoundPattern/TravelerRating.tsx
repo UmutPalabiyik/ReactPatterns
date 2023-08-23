@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { TravelerCardContext } from "./TravelerCard";
 
 
-
 const TravelerRating = () => {
     const { rating } = useContext(TravelerCardContext)
     return (
