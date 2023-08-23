@@ -6,8 +6,9 @@ import TravelerImage from "./TravelerImage";
 import TravelerPrice from "./TravelerPrice";
 import TravelerRating from "./TravelerRating";
 import TravelerTitle from "./TravelerTitle";
+import { TravelerCardProps } from "./interfaces";
 
-const TravelerCard = (props: any) => {
+const TravelerCard = (props: TravelerCardProps) => {
     const { image,
         rating,
         category,
@@ -25,14 +26,12 @@ const TravelerCard = (props: any) => {
             {showCategory && <TravelerCategory category={category} />}
             {showTitle && <TravelerTitle title={title} />}
             {showRating && <TravelerRating rating={rating} />}
-            {showPrice && <TravelerPrice price={price} currency="€"  />}
+            {showPrice && <TravelerPrice price={price} currency="€" />}
             <TravelerTopActions favorite={favorite} report={report} />
             <TravelerAction />
         </div>
     )
 }
-
-
 
 
 export default TravelerCard;
